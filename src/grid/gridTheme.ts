@@ -2,7 +2,7 @@ import { themeQuartz } from 'ag-grid-community';
 
 export const gridTheme = themeQuartz.withParams({
   fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-  fontSize: 15,
+  fontSize: 14,
   backgroundColor: '#ffffff',
   dataBackgroundColor: '#ffffff',
   headerBackgroundColor: '#ffffff',
@@ -14,9 +14,10 @@ export const gridTheme = themeQuartz.withParams({
   headerRowBorder: true,
   wrapperBorder: true,
   wrapperBorderRadius: 0,
-  cellHorizontalPadding: 24,
-  headerHeight: 52,
-  rowHeight: 48,
+  cellHorizontalPadding: 16,
+  rowHeight: 44,
+  headerHeight: 48,
   rowGroupIndentSize: 16,
   iconSize: 16,
+  oddRowBackgroundColor: '#fafafa',
 });

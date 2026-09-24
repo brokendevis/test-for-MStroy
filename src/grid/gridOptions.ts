@@ -21,6 +21,8 @@ export const TREE_GRID_OPTIONS: GridOptions<TreeRow<Item>> = {
     suppressHeaderMenuButton: true,
   },
   suppressCellFocus: true,
+  rowHeight: 44,
+  headerHeight: 48,
   onModelUpdated: (params) => {
     params.api.refreshCells({ columns: [ROW_NUMBER_COLUMN_ID], force: true });
   },
