@@ -1,0 +1,35 @@
+{
+  "name": "mstroy-tree-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --build --force && vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --build --force",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "ag-grid-community": "^36.2.0",
+    "ag-grid-enterprise": "^36.2.0",
+    "ag-grid-vue3": "^36.2.0",
+    "vue": "^3.5.43"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.6",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vitest/coverage-v8": "^5.0.1",
+    "@vue/test-utils": "^2.5.1",
+    "jsdom": "^30.1.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1",
+    "vue-tsc": "^3.3.11"
+  }
+}
