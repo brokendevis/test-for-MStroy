@@ -1,10 +1,24 @@
 <script setup lang="ts">
-const title = 'MStroy test task: TreeStore + AgGrid';
+import { onMounted, ref } from 'vue';
+
+import { fetchItems, type Item } from '@/api/itemsApi';
+import TreeTable from '@/components/TreeTable.vue';
+import { useTreeStore } from '@/composables/useTreeStore';
+
+const { store, rows } = useTreeStore<Item>();
+const loading = ref(true);
+
+onMounted(async () => {
+  store.setItems(await fetchItems());
+  loading.value = false;
+});
 </script>
 
 <template>
   <main class="app-shell">
-    <h1 class="app-shell__title">{{ title }}</h1>
+    <section class="app-card">
+      <TreeTable :rows="rows" :loading="loading" />
+    </section>
   </main>
 </template>
 
@@ -13,9 +27,13 @@ const title = 'MStroy test task: TreeStore + AgGrid';
   padding: 40px;
 }
 
-.app-shell__title {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
+.app-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.app-shell :deep(.ag-root-wrapper) {
+  border: none;
 }
 </style>
