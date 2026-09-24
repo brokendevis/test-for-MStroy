@@ -35,6 +35,7 @@ export const COLUMN_DEFS: ColDef<TreeRow<Item>>[] = [
     headerName: 'Категория',
     width: 310,
     showRowGroup: true,
+    cellRenderer: 'agGroupCellRenderer',
     valueGetter: (params) => categoryLabel(params.data),
     cellClass: (params) => categoryCellClass(params.data),
     cellRendererParams: { suppressCount: true },
